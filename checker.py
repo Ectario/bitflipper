@@ -11,12 +11,7 @@ def check_same_block(index_begin, index_end, block_size=16):
     if index_end - index_begin > block_size:
         return False
 
-    index_block = index_begin // block_size
-    for x in range(index_begin + 1, index_end):
-        if x // block_size != index_block:
-            return False
-
-    return True
+    return index_begin // block_size == index_end // block_size
 
 def check_egality_length(plaintext, wanted):
     """

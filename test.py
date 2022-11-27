@@ -43,6 +43,7 @@ print()
 
 print("--------------------------------- Full result ---------------------------------")
 ciphertext = encrypt(plaintext)
+print(ciphertext)
 cipher_modified = flipper(plaintext, ciphertext, wanted, 16, False)
 print(decrypt(cipher_modified))
 # print("\n\ncipher:", get_blocks(ciphertext, 16, True))

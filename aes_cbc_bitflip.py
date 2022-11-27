@@ -109,7 +109,8 @@ def flipper(plaintext_given, ciphertext, plaintext_wanted, block_size=16, log=Fa
         msg_blocks_enc_list[block_nb - 1][i] = r[0]
         msg_blocks_enc_list[block_nb - 1][i+1] = r[1]
         index_text+=1
-
+    if log:
+        print() # Just to let a space between last log and next print 
     msg_blocks_enc = ["".join(i) for i in msg_blocks_enc_list]
     final_payload = "".join(msg_blocks_enc)
     return final_payload
