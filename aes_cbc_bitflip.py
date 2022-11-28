@@ -66,7 +66,6 @@ def flipper(plaintext_given, ciphertext, plaintext_wanted, block_size=16, log=Fa
 
     if log:
         print("[!] Message blocks : \n")
-        print()
 
     msg_blocks = get_blocks(plaintext_given, block_size, False)
 
@@ -84,7 +83,6 @@ def flipper(plaintext_given, ciphertext, plaintext_wanted, block_size=16, log=Fa
         print()
         print("[!] Msg blocks enc :\n")
         print(msg_blocks_enc)
-        print()
 
     msg_blocks_enc_list = [list(i) for i in msg_blocks_enc]
 
